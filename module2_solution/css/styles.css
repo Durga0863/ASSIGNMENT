@@ -1,10 +1,95 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+/* Basic Reset and Box Sizing */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Ensures padding and borders are included in element's width and height */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px; /* Adds space between content and browser edges */
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  margin-bottom: 20px; /* Space below the header */
 }
 
 h1 {
+  font-size: 2em;
+  margin: 0; /* No extra margin around the heading */
+}
+
+/* Container and Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Spacing between each section horizontally and vertically */
+  justify-content: center;
+}
+
+/* Section Styles */
+.section {
+  position: relative; /* Allows absolute positioning for the title */
+  border: 1px solid black;
+  padding: 20px; /* Internal padding to keep text away from edges */
+  padding-top: 50px; /* Extra padding on top to ensure text doesn't overlap the title region */
+  background-color: #cfcfcf;
   color: #333;
+  width: 32%; /* Default width for desktop view */
+  min-height: 150px;
+  box-sizing: border-box; /* Ensures padding is included within the width */
+}
+
+/* Title Region (Top-Right Corner) */
+.section .title {
+  position: absolute;
+  top: 0px; /* Distance from the top of the section */
+  right: 0px; /* Distance from the right of the section */
+  padding: 5px 10px;
+  background-color: #d9534f;
+  color: white;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+/* Unique Colors for Each Title */
+#section1 .title {
+  background-color: #d9534f; /* Red for Chicken */
+}
+
+#section2 .title {
+  background-color: #5bc0de; /* Blue for Beef */
+}
+
+#section3 .title {
+  background-color: #f0ad4e; /* Yellow for Sushi */
+}
+
+/* Responsive Layouts */
+
+/* Desktop View - 992px and above */
+@media (min-width: 992px) {
+  .section {
+      width: 32%; /* Fit three sections side by side */
+  }
+}
+
+/* Tablet View - between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .section {
+      width: 48%; /* Two sections side by side */
+  }
+
+  #section3 {
+      width: 98%; /* Third section spans full width */
+  }
+}
+
+/* Mobile View - 767px and below */
+@media (max-width: 767px) {
+  .section {
+      width: 100%; /* Stack sections vertically */
+  }
 }
