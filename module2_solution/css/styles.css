@@ -14,8 +14,8 @@ body {
 
 /* Header Styles */
 header {
-  text-align: center;
-  margin-bottom: 20px; /* Space below the header */
+  text-align: start;
+  margin-bottom: 10px; /* Space below the header */
 }
 
 h1 {
