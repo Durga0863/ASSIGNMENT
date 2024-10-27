@@ -6,7 +6,9 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
+  font-style: oblique;
+  text:solid black;
   padding: 20px; /* Adds space between content and browser edges */
 }
 
@@ -32,7 +34,7 @@ h1 {
 /* Section Styles */
 .section {
   position: relative; /* Allows absolute positioning for the title */
-  border: 1px solid black;
+  border: 3px solid black;
   padding: 20px; /* Internal padding to keep text away from edges */
   padding-top: 50px; /* Extra padding on top to ensure text doesn't overlap the title region */
   background-color: #cfcfcf;
@@ -47,7 +49,7 @@ h1 {
   position: absolute;
   top: 0px; /* Distance from the top of the section */
   right: 0px; /* Distance from the right of the section */
-  padding: 5px 10px;
+  padding: 5px 23px;
   background-color: #d9534f;
   color: white;
   font-weight: bold;
@@ -70,7 +72,7 @@ h1 {
 /* Responsive Layouts */
 
 /* Desktop View - 992px and above */
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .section {
       width: 32%; /* Fit three sections side by side */
   }
